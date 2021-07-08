@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Pace Clock Application
+
+[Service]
+Type=oneshot
+User=pi
+WorkingDirectory=/home/pi/paceclock
+ExecStart=/usr/local/bin/pipenv run python app.py
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
